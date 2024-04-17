@@ -1,13 +1,7 @@
 <script lang="javascript">
-	import ArrowRight from '$lib/svg/ArrowRight.svelte';
-	import Growth from '$lib/svg/Growth.svelte';
-	import GrowthSmall from '$lib/svg/GrowthSmall.svelte';
-	import SuggestedSmall from '$lib/svg/SuggestedSmall.svelte';
-	import Suggested from '$lib/svg/Suggested.svelte';
 	import { onMount } from 'svelte';
-	import { blur, slide } from 'svelte/transition';
+	import { blur } from 'svelte/transition';
 	import suggested from '$lib/aisuggested/suggested.png';
-	import { quartInOut } from 'svelte/easing';
 	let ready = false;
 	onMount(() => (ready = true));
 	$: innerWidth = 0;
@@ -167,7 +161,7 @@
 			margin: 224px auto 0px auto;
 		}
 
-		container {
+		.container {
 			margin: 48px auto;
 		}
 	}
