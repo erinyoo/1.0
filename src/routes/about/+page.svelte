@@ -45,6 +45,7 @@
 		font: 4rem $gelica;
 		font-weight: 400;
 		margin: 0;
+		transition: all 0.5s 0s ease;
 	}
 
 	.eevee {
@@ -52,6 +53,7 @@
 		width: 100%;
 		grid-column-start: 8;
 		grid-column-end: 12;
+		transition: all 0.5s 0s ease;
 	}
 
 	.paint {
@@ -59,6 +61,7 @@
 		width: 100%;
 		grid-column-start: 8;
 		grid-column-end: 12;
+		transition: all 0.5s 0s ease;
 	}
 
 	.erin {
@@ -66,10 +69,12 @@
 		width: 100%;
 		grid-column-start: 12;
 		grid-column-end: 19;
+		transition: all 0.5s 0s ease;
 	}
 
 	.container {
 		margin: 224px auto;
+		transition: all 0.5s 0s ease;
 	}
 
 	.title {
@@ -82,6 +87,7 @@
 		font: 1rem $inter;
 		color: $black;
 		line-height: 175%;
+		transition: all 0.5s 0s ease;
 	}
 
 	.grid {
@@ -89,11 +95,53 @@
 		max-width: 1600px;
 		width: 100%;
 		grid-template-columns: repeat(25, 1fr);
+		transition: all 0.5s 0s ease;
 	}
 
 	.section {
 		padding: 0 0 64px 0;
 		grid-column-start: 8;
 		grid-column-end: 19;
+		transition: all 0.5s 0s ease;
+	}
+
+	@media only screen and (max-width: 700px) {
+		.erin {
+			grid-column-start: 8;
+			grid-column-end: 25;
+			transition: all 0.5s 0s ease;
+		}
+
+		.eevee {
+			grid-column-start: 2;
+			grid-column-end: 8;
+			transition: all 0.5s 0s ease;
+		}
+
+		.paint {
+			grid-column-start: 2;
+			grid-column-end: 15;
+			transition: all 0.5s 0s ease;
+		}
+
+		.section {
+			padding: 0 0 64px 0;
+			grid-column-start: 4;
+			grid-column-end: 23;
+			transition: all 0.5s 0s ease;
+		}
+
+		h1 {
+			text-align: center;
+			font: 3rem $gelica;
+			font-weight: 400;
+			margin: 0;
+			transition: all 0.5s 0s ease;
+		}
+
+		.container {
+			margin: 164px auto;
+			transition: all 0.5s 0s ease;
+		}
 	}
 </style>

@@ -63,7 +63,8 @@
 	$subtle: #9a9390;
 
 	.container {
-		margin: 124px auto;
+		margin: 64px auto;
+		transition: all 0.5s 0s ease;
 	}
 
 	.grid {
@@ -71,12 +72,14 @@
 		max-width: 1600px;
 		width: 100%;
 		grid-template-columns: repeat(25, 1fr);
+		transition: all 0.5s 0s ease;
 	}
 
 	.section {
 		padding: 0 0 64px 0;
 		grid-column-start: 8;
 		grid-column-end: 19;
+		transition: all 0.5s 0s ease;
 	}
 
 	.subheader {
@@ -117,6 +120,7 @@
 	h3 {
 		font: 1.6rem $gelica;
 		margin: 0;
+		transition: all 0.5s 0s ease;
 	}
 
 	.description {
@@ -126,12 +130,14 @@
 		line-height: 1.8rem;
 		margin: 0 auto;
 		text-align: center;
+		transition: all 0.5s 0s ease;
 	}
 
 	h1 {
 		text-align: center;
-		font: 3.8rem $gelica;
+		font: 4rem $gelica;
 		margin: 0px;
+		transition: all 0.5s 0s ease;
 	}
 
 	.heading {
@@ -141,6 +147,7 @@
 		justify-content: center;
 		align-items: center;
 		gap: 64px;
+		transition: all 0.5s 0s ease;
 	}
 
 	.header {
@@ -153,25 +160,38 @@
 
 	@media only screen and (max-width: 700px) {
 		h3 {
-			font: 1rem $gelica;
+			font: 1.5rem $gelica;
 			margin: 0;
+			transition: all 0.5s 0s ease;
+		}
+
+		h1 {
+			text-align: center;
+			font: 3rem $gelica;
+			margin: 0px;
+			transition: all 0.5s 0s ease;
+		}
+
+		.description {
+			width: 90%;
+			transition: all 0.5s 0s ease;
 		}
 
 		.heading {
-			margin: 224px auto 0px auto;
+			margin: 164px auto 0px auto;
+			transition: all 0.5s 0s ease;
 		}
 
 		.container {
 			margin: 48px auto;
+			transition: all 0.5s 0s ease;
 		}
-	}
 
-	@media only screen and (max-width: 950px) {
-	}
-
-	@media only screen and (max-width: 800px) {
-	}
-
-	@media only screen and (max-width: 700px) {
+		.section {
+			padding: 0 0 64px 0;
+			grid-column-start: 2;
+			grid-column-end: 25;
+			transition: all 0.5s 0s ease;
+		}
 	}
 </style>

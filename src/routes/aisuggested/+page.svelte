@@ -338,4 +338,47 @@
 		border-radius: 15px;
 		box-shadow: -1px 4px 10px 0px rgba(135, 138, 143, 0.2);
 	}
+
+	@media only screen and (max-width: 700px) {
+		.image {
+			margin: 0 0 64px 0;
+			grid-column-start: 4;
+			grid-column-end: 23;
+		}
+
+		.section {
+			padding: 0 0 64px 0;
+			grid-column-start: 4;
+			grid-column-end: 23;
+		}
+
+		.enterpassword {
+			grid-column-start: 4;
+			grid-column-end: 23;
+			display: flex;
+			flex-direction: column;
+			gap: 12px;
+		}
+
+		h1 {
+			text-align: center;
+			font: 3rem $gelica;
+			font-weight: 400;
+			margin: 0;
+		}
+
+		h2 {
+			font: 1.6rem $gelica;
+			margin: 0 0 8px 0;
+		}
+
+		h3 {
+			font: 1.2rem $gelica;
+			margin: 24px 0 8px 0;
+		}
+
+		.container {
+			margin: 164px auto;
+		}
+	}
 </style>

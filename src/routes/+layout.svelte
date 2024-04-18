@@ -107,7 +107,7 @@
 		font: 1rem $gelica;
 		line-height: 175%;
 		color: $subtle;
-		font-weight: 400;
+		font-weight: 200;
 	}
 
 	.linkitem {
@@ -123,7 +123,7 @@
 		justify-content: center;
 		align-items: center;
 		gap: 24px;
-		margin-top: 64px 0 32px 0;
+		margin-top: 0;
 	}
 
 	.navlinks {
@@ -134,10 +134,15 @@
 		transition: all 0.5s 0s ease;
 	}
 
-	@media only screen and (max-width: 500px) {
+	@media only screen and (max-width: 700px) {
 		.navlinks {
-			padding: 24px 32px;
+			padding: 32px 64px;
+			gap: 16px;
 			transition: all 0.5s 0s ease;
+		}
+
+		.footerlinks {
+			flex-direction: column;
 		}
 	}
 </style>

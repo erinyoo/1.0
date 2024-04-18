@@ -32,14 +32,14 @@
 
 	@media only screen and (max-width: 500px) {
 		a {
-			font: $font-weight 0.8rem $font-family;
+			font: $font-weight 1rem $font-family;
 			transition: all 0.5s 0s ease;
 		}
 	}
 
 	@media only screen and (max-width: 400px) {
 		a {
-			font: $font-weight 0.6rem $font-family;
+			font: $font-weight 1rem $font-family;
 			transition: all 0.5s 0s ease;
 		}
 	}
