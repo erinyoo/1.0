@@ -37,7 +37,7 @@
 			<div class="linkitem">
 				<a href="https://www.linkedin.com/in/erinyoo" target="_blank">Linkedin</a>
 			</div>
-			<button on:click={copyClipboard} class="linkitem">Copy my email: hello@erinyoo.com</button>
+			<button on:click={copyClipboard} class="linkitem">Copy my email: erinswyoo@gmail.com</button>
 		</div>
 
 		<div class="copyright">© 2024 Erin Yoo</div>
@@ -112,6 +112,7 @@
 
 	.linkitem {
 		font: 500 1rem $inter;
+		color: $black;
 		display: flex;
 		align-items: center;
 		gap: 8px;
