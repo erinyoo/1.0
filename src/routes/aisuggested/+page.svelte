@@ -339,6 +339,12 @@
 		box-shadow: -1px 4px 10px 0px rgba(135, 138, 143, 0.2);
 	}
 
+	@media only screen and (max-width: 900px) {
+		.notelayout {
+			flex-direction: column;
+		}
+	}
+
 	@media only screen and (max-width: 700px) {
 		.image {
 			margin: 0 0 64px 0;
