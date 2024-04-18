@@ -18,7 +18,7 @@
 			<NavLink href="/about" title="About" />
 			<NavLink href="mailto:erinswyoo@gmail.com" title="Contact" />
 			<NavLink
-				href="https://docs.google.com/document/d/1yQS4ySt_lm7bJz4PTk1lBg_E-WFynAwQ0ElxqZ2J97c/edit?usp=sharing"
+				href="https://docs.google.com/document/d/1BSQDgdBbmx30u3T2079OEMV8RHwlCkdEInQ5TI00LjI/edit?usp=sharing"
 				title="Resume"
 				newTab={true}
 			/>
