@@ -64,13 +64,13 @@
 					</div>
 				</div>
 				<div class="note">
-					<div class="subheader">Insight 1</div>
+					<div class="subheader">Insight 2</div>
 					<div class="description">
 						People didn’t immediately recognize the topics bar as a search bar
 					</div>
 				</div>
 				<div class="note">
-					<div class="subheader">Insight 1</div>
+					<div class="subheader">Insight 3</div>
 					<div class="description">
 						People didn’t immediately recognize the topics bar as a search bar
 					</div>

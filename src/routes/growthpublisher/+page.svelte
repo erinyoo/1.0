@@ -9,10 +9,14 @@
 
 	import { blur } from 'svelte/transition';
 	import cover from '$lib/growthpublisher/cover.png';
-	import showcase from '$lib/aisuggested/showcase.png';
-	import guidelines from '$lib/aisuggested/guidelines.png';
-	import distinction from '$lib/aisuggested/visual.png';
-	import iterations from '$lib/aisuggested/iterations.png';
+	import different from '$lib/growthpublisher/differentway.png';
+	import posttypes from '$lib/growthpublisher/posttypes.png';
+	import examples from '$lib/growthpublisher/examples.png';
+	import sketch1 from '$lib/growthpublisher/sketch1.png';
+	import sketch2 from '$lib/growthpublisher/sketch2.png';
+	import stresstest from '$lib/growthpublisher/stresstest.png';
+	import spec from '$lib/growthpublisher/spec.png';
+	import flows from '$lib/growthpublisher/flows.png';
 </script>
 
 <div out:blur={{ delay: 100 }} in:blur={{ delay: 200 }} class="container">
@@ -33,164 +37,191 @@
 					target={'_blank'}>Viva Engage</a
 				>.
 			</div>
+
+			<h3><s>Discussion posts</s> Question posts</h3>
+			<div class="description">
+				To start off we analyzed how people are utilizing question posts and found some interesting
+				behavior patterns. To give a little more context: in Viva Engage, people can utilize a
+				variety of post types to help convey their thoughts: discussions, questions, polls, praises,
+				and articles. In the experience, we default posts to discussions and (to no surprise) the
+				majority of posts are discussion types.
+			</div>
+		</div>
+
+		<img class="image" alt="Examples of misuse" src={examples} />
+		<div class="section">
+			<div class="description">
+				As we performed our analysis we began to see a pattern of people asking questions in
+				discussion post format rather than utilizing the question post.
+			</div>
 		</div>
 	</div>
 
 	{#if hash(password) === -1104066105}
 		<div class="grid">
 			<div class="section">
-				<h2>Understanding the problem</h2>
+				<h2>The problem</h2>
 				<div class="description">
-					We performed interviews to further understand how people were interacting with the topic
-					bar. It revealed some interesting insights as to why people were actually struggling:
+					It's not entirely a surprise to us that this was happening. Our assumption was that this
+					was due to the fact that our current flow requires users to open a dropdown menu to switch
+					post types. Without knowing upfront, the UI provides no other signals to indicating to
+					people that switching a post type is possible OR why it might be valuable for them.
+				</div>
+			</div>
+			<img class="image" alt="The different post types" src={posttypes} />
+		</div>
+
+		<div class="grid">
+			<div class="section">
+				<h2>Is this a real problem?</h2>
+				<div class="description">
+					Why was this a problem though? So what if people were using discussions to post questions?
+					Well for Viva Answers, this meant a loss in engagement; less questions being asked meant
+					less knowledge we could leverage. This also meant there was an opportunity here for a
+					quick and worthwhile growth investment.
+				</div>
+				<div class="description">
+					In the point of view of the people asking questions, behind the scenes they weren't
+					getting all the benefits a question post type provides. They were losing out on feature
+					benefits such as upvoting capabilities and most importantly knowledge being properly
+					indexed (i.e. getting their questions answered quickly).
+				</div>
+			</div>
+		</div>
+
+		<div class="grid">
+			<div class="section">
+				<h2>Finding a solution</h2>
+				<div class="description">
+					Before we dove into solving the problem, we set some ground rules or in other words,
+					constraints and principles.
 				</div>
 			</div>
 
 			<div class="notelayout">
 				<div class="note">
-					<div class="subheader">Insight 1</div>
+					<div class="subheader">Rule 1</div>
 					<div class="description">
-						People didn’t immediately recognize the topics bar as a search bar
+						No AI, as much as AI would be a fantastic part of this solution we didn't have funding
+						and needed to provide a solution that would work without it
 					</div>
 				</div>
 				<div class="note">
-					<div class="subheader">Insight 1</div>
+					<div class="subheader">Rule 2</div>
 					<div class="description">
-						People didn’t immediately recognize the topics bar as a search bar
+						Keep it intuitive and non-disruptive, let's meet people where their at and keep
+						disruption to a minimum
 					</div>
 				</div>
 				<div class="note">
-					<div class="subheader">Insight 1</div>
+					<div class="subheader">Rule 3</div>
 					<div class="description">
-						People didn’t immediately recognize the topics bar as a search bar
+						Make it testable but also engineering feasible, we wanted a lightweight solution that
+						didn't require much engineering lift and was easily A/B testable
 					</div>
 				</div>
 			</div>
-			<div class="section">
-				<div class="description">
-					We realized that the topic picking experience was quite a huge undertaking. For such a
-					small feature, it weighed heavily on the entire process of asking a question <i
-						>especially because it was a required step.</i
-					> The asking experience should be easy, not difficult.
-				</div>
-			</div>
-		</div>
-
-		<div class="grid">
-			<div class="section">
-				<h2>Reframing the problem</h2>
-				<div class="description">
-					Due to engineering constraints and previous design constraints, the process of adding a
-					topic had become arduous for people. To help us think through possible solutions, we posed
-					a question to help reframe our problem: how might we make it as easy as possible for
-					people to attach topics to their questions?
-				</div>
-			</div>
-		</div>
-
-		<div class="grid">
-			<div class="section">
-				<h2>Introducing: AI-suggested Topics</h2>
-			</div>
-			<img class="image" alt="Introducing AI-suggested topics" src={showcase} />
-			<div class="section">
-				<div class="description">
-					AI-suggested topics makes adding topics as simple as the click of a button. Compose your
-					question, and behind the scenes AI will process your content and surface suggested topics
-					for you to choose, all you have to do is click.
-				</div>
-			</div>
-		</div>
-
-		<div class="grid">
-			<div class="section">
-				<h2>The nitty gritty</h2>
-				<div class="description">
-					Before we landed on our final shipped feature, the solution went through it's fair share
-					of iterations before reaching it's final stage.
-				</div>
-				<h3>AI in Microsoft</h3>
-				<div class="description">
-					As one of the first AI features being released on the Viva Engage platform, we had to
-					familiarize ourselves with evolving company guidelines and designs on AI and Copilot.
-				</div>
-			</div>
-
-			<img class="image" alt="Microsoft's AI design guidelines" src={guidelines} />
 
 			<div class="section">
-				<h3>Being intentional</h3>
-				<div class="description">
-					It also meant thinking about language and visual distinctions. In addition to suggesting
-					existing topics, the AI will create new topics for users and recommend them, this is when
-					the AI *generates* a topic. The distinction may not be important to users, but guidelines
-					state our design had to visually distinguish these topics to be as explicit as possible.
-				</div>
+				<div class="description">And we also set up what success looked like for this project.</div>
 			</div>
 
-			<img class="image" alt="Visual distinction" src={distinction} />
-
-			<div class="section">
-				<h3>Embracing iterations</h3>
-				<div class="description">
-					Then came the part of gathering feedback on our high level concepts from the bigger design
-					and engineering team to break down our concepts to feasible, scalable, and testable
-					designs.
-				</div>
-			</div>
-
-			<img class="image" alt="Visual distinction" src={iterations} />
-		</div>
-
-		<div class="grid">
-			<div class="section">
-				<h2>The impact</h2>
-			</div>
 			<div class="notelayout">
 				<div class="note">
-					<div class="subheader">Impact 1</div>
+					<div class="subheader">Metric 1</div>
 					<div class="description">
-						<b><h3>54%</h3></b> Topics added are suggested topics
+						Increasing the number of question posts, with no negative impact on posts overall
 					</div>
 				</div>
 				<div class="note">
-					<div class="subheader">Impact 2</div>
-					<div class="description"><b><h3>Overall</h3></b> Decrease in question abandonment</div>
+					<div class="subheader">Metric 2</div>
+					<div class="description">Increase in people using the question post type</div>
 				</div>
 			</div>
 		</div>
 
 		<div class="grid">
 			<div class="section">
-				<h2>Growing pains</h2>
+				<h2>Sketching and concepts</h2>
+				<div class="description">We started off by sketching and brainstorming ideas.</div>
+			</div>
+
+			<img class="image" alt="Sketches" src={sketch1} />
+			<img class="image" alt="Sketches" src={sketch2} />
+
+			<div class="section">
+				<h3>Narrowing in on a concept</h3>
 				<div class="description">
-					As a first project the learnings and takeaways were invaluable. As a developer turned
-					designer my mindset shift has been one of the hardest parts of growing as a designer. Some
-					key points I felt worthy of noting:
+					We narrowed our sketches and ideas down to three concepts and began to stress test. At
+					this stage, we brought in engineering to help us look deeper into feasibility and
+					testability.
 				</div>
+			</div>
+
+			<img class="image" alt="Hi fidelity concepts" src={stresstest} />
+
+			<div class="section">
+				<div class="description">Even going as far as to look into other behavior paths.</div>
+			</div>
+
+			<img class="image" alt="Hi fidelity concepts" src={different} />
+		</div>
+
+		<div class="grid">
+			<div class="section">
+				<h2>The solution: a small teaching moment</h2>
 				<div class="description">
-					<ul>
-						<li>
-							<b>Sketch!</b> Creating hi-fidelity concepts early seems tempting, but it's a trap. To
-							be able to effectively gain buy-in from stakeholders early on in the process, sketches
-							are one of the most powerful ways to do so. If not sketches, then lo-fidelity mocks.
-						</li>
-						<li>
-							<b>Communicate often and early</b> Communication is truly key when working with cross-functional
-							teams. Oversharing never seemed to be a problem.
-						</li>
-						<li>
-							<b>Get feedback often and early.</b> Obviously too much feedback can be a recipe for "too
-							many cooks in the kitchen", but tweaking the spacing between two components for 30 minutes
-							will also get you nowhere.
-						</li>
-						<li>
-							<b>Problem understanding is key.</b> Without a well-defined problem or even an understanding
-							of your problem, it'll be difficult to ideate or even create proper solutions. Taking time
-							to truly define and gather information surrounding the problem can set a project up for
-							success.
-						</li>
-					</ul>
+					We landed on the concept of a small teaching moment. Based off engineering feedback, it
+					was the most feasible and took the least amount of time which was an absolute plus for us.
+					In addition, it was the most non-disruptive of our choices.
+				</div>
+			</div>
+
+			<img class="image" alt="Spec" src={spec} />
+			<img class="image" alt="User flows" src={flows} />
+		</div>
+
+		<div class="grid">
+			<div class="section">
+				<h2>Dogfooding and impact</h2>
+				<div class="description">
+					At Microsoft, dogfooding our products is one of the biggest parts of designing and
+					creating features. This lightweight teaching moment was a perfect candidate for A/B
+					testing.
+				</div>
+
+				<div class="description">
+					We ran this experiment for two months in our inner ring and came out with some amazing
+					results. Looking back at our success criteria we hit all marks:
+				</div>
+			</div>
+
+			<div class="notelayout">
+				<div class="note">
+					<div class="subheader">Metric 1</div>
+					<div class="description">
+						Number of questions posts were increased at a statistically significant rate
+					</div>
+				</div>
+				<div class="note">
+					<div class="subheader">Metric 2</div>
+					<div class="description">
+						Number of users manually using the question post type was increased at a statistically
+						significant rate
+					</div>
+				</div>
+				<div class="note">
+					<div class="subheader">Metric 3</div>
+					<div class="description">
+						There was even a bonus of an increase in search engagement related to questions
+					</div>
+				</div>
+			</div>
+
+			<div class="section">
+				<div class="description">
+					A rather successful mini-experiment! This data confirmed our assumptions and provided a
+					path forward to bring this to production.
 				</div>
 			</div>
 		</div>
