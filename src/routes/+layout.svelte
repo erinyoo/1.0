@@ -7,7 +7,7 @@
 	onMount(() => (ready = true));
 
 	function copyClipboard() {
-		navigator.clipboard.writeText('hello@erinyoo.com');
+		navigator.clipboard.writeText('erinswyoo@gmail.com');
 	}
 </script>
 
@@ -16,7 +16,7 @@
 		<div class="navlinks">
 			<NavLink href="/" title="Home" />
 			<NavLink href="/about" title="About" />
-			<NavLink href="mailto:hello@erinyoo.com" title="Contact" />
+			<NavLink href="mailto:erinswyoo@gmail.com" title="Contact" />
 			<NavLink
 				href="https://docs.google.com/document/d/1yQS4ySt_lm7bJz4PTk1lBg_E-WFynAwQ0ElxqZ2J97c/edit?usp=sharing"
 				title="Resume"
