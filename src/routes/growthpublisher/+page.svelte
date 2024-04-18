@@ -57,175 +57,173 @@
 		</div>
 	</div>
 
-	{#if hash(password) === -1104066105}
-		<div class="grid">
-			<div class="section">
-				<h2>The problem</h2>
-				<div class="description">
-					It's not entirely a surprise to us that this was happening. Our assumption was that this
-					was due to the fact that our current flow requires users to open a dropdown menu to switch
-					post types. Without knowing upfront, the UI provides no other signals to indicating to
-					people that switching a post type is possible OR why it might be valuable for them.
-				</div>
-			</div>
-			<img class="image" alt="The different post types" src={posttypes} />
-		</div>
-
-		<div class="grid">
-			<div class="section">
-				<h2>Is this a real problem?</h2>
-				<div class="description">
-					Why was this a problem though? So what if people were using discussions to post questions?
-					Well for Viva Answers, this meant a loss in engagement; less questions being asked meant
-					less knowledge we could leverage. This also meant there was an opportunity here for a
-					quick and worthwhile growth investment.
-				</div>
-				<div class="description">
-					In the point of view of the people asking questions, behind the scenes they weren't
-					getting all the benefits a question post type provides. They were losing out on feature
-					benefits such as upvoting capabilities and most importantly knowledge being properly
-					indexed (i.e. getting their questions answered quickly).
-				</div>
+	<!-- {#if hash(password) === -1104066105} -->
+	<div class="grid">
+		<div class="section">
+			<h2>The problem</h2>
+			<div class="description">
+				It's not entirely a surprise to us that this was happening. Our assumption was that this was
+				due to the fact that our current flow requires users to open a dropdown menu to switch post
+				types. Without knowing upfront, the UI provides no other signals to indicating to people
+				that switching a post type is possible OR why it might be valuable for them.
 			</div>
 		</div>
+		<img class="image" alt="The different post types" src={posttypes} />
+	</div>
 
-		<div class="grid">
-			<div class="section">
-				<h2>Finding a solution</h2>
+	<div class="grid">
+		<div class="section">
+			<h2>Is this a real problem?</h2>
+			<div class="description">
+				Why was this a problem though? So what if people were using discussions to post questions?
+				Well for Viva Answers, this meant a loss in engagement; less questions being asked meant
+				less knowledge we could leverage. This also meant there was an opportunity here for a quick
+				and worthwhile growth investment.
+			</div>
+			<div class="description">
+				In the point of view of the people asking questions, behind the scenes they weren't getting
+				all the benefits a question post type provides. They were losing out on feature benefits
+				such as upvoting capabilities and most importantly knowledge being properly indexed (i.e.
+				getting their questions answered quickly).
+			</div>
+		</div>
+	</div>
+
+	<div class="grid">
+		<div class="section">
+			<h2>Finding a solution</h2>
+			<div class="description">
+				Before we dove into solving the problem, we set some ground rules or in other words,
+				constraints and principles.
+			</div>
+		</div>
+
+		<div class="notelayout">
+			<div class="note">
+				<div class="subheader">Rule 1</div>
 				<div class="description">
-					Before we dove into solving the problem, we set some ground rules or in other words,
-					constraints and principles.
+					No AI, as much as AI would be a fantastic part of this solution we didn't have funding and
+					needed to provide a solution that would work without it
 				</div>
 			</div>
-
-			<div class="notelayout">
-				<div class="note">
-					<div class="subheader">Rule 1</div>
-					<div class="description">
-						No AI, as much as AI would be a fantastic part of this solution we didn't have funding
-						and needed to provide a solution that would work without it
-					</div>
-				</div>
-				<div class="note">
-					<div class="subheader">Rule 2</div>
-					<div class="description">
-						Keep it intuitive and non-disruptive, let's meet people where their at and keep
-						disruption to a minimum
-					</div>
-				</div>
-				<div class="note">
-					<div class="subheader">Rule 3</div>
-					<div class="description">
-						Make it testable but also engineering feasible, we wanted a lightweight solution that
-						didn't require much engineering lift and was easily A/B testable
-					</div>
+			<div class="note">
+				<div class="subheader">Rule 2</div>
+				<div class="description">
+					Keep it intuitive and non-disruptive, let's meet people where their at and keep disruption
+					to a minimum
 				</div>
 			</div>
-
-			<div class="section">
-				<div class="description">And we also set up what success looked like for this project.</div>
-			</div>
-
-			<div class="notelayout">
-				<div class="note">
-					<div class="subheader">Metric 1</div>
-					<div class="description">
-						Increasing the number of question posts, with no negative impact on posts overall
-					</div>
-				</div>
-				<div class="note">
-					<div class="subheader">Metric 2</div>
-					<div class="description">Increase in people using the question post type</div>
+			<div class="note">
+				<div class="subheader">Rule 3</div>
+				<div class="description">
+					Make it testable but also engineering feasible, we wanted a lightweight solution that
+					didn't require much engineering lift and was easily A/B testable
 				</div>
 			</div>
 		</div>
 
-		<div class="grid">
-			<div class="section">
-				<h2>Sketching and concepts</h2>
-				<div class="description">We started off by sketching and brainstorming ideas.</div>
-			</div>
-
-			<img class="image" alt="Sketches" src={sketch1} />
-			<img class="image" alt="Sketches" src={sketch2} />
-
-			<div class="section">
-				<h3>Narrowing in on a concept</h3>
-				<div class="description">
-					We narrowed our sketches and ideas down to three concepts and began to stress test. At
-					this stage, we brought in engineering to help us look deeper into feasibility and
-					testability.
-				</div>
-			</div>
-
-			<img class="image" alt="Hi fidelity concepts" src={stresstest} />
-
-			<div class="section">
-				<div class="description">Even going as far as to look into other behavior paths.</div>
-			</div>
-
-			<img class="image" alt="Hi fidelity concepts" src={different} />
+		<div class="section">
+			<div class="description">And we also set up what success looked like for this project.</div>
 		</div>
 
-		<div class="grid">
-			<div class="section">
-				<h2>The solution: a small teaching moment</h2>
+		<div class="notelayout">
+			<div class="note">
+				<div class="subheader">Metric 1</div>
 				<div class="description">
-					We landed on the concept of a small teaching moment. Based off engineering feedback, it
-					was the most feasible and took the least amount of time which was an absolute plus for us.
-					In addition, it was the most non-disruptive of our choices.
+					Increasing the number of question posts, with no negative impact on posts overall
 				</div>
 			</div>
-
-			<img class="image" alt="Spec" src={spec} />
-			<img class="image" alt="User flows" src={flows} />
-		</div>
-
-		<div class="grid">
-			<div class="section">
-				<h2>Dogfooding and impact</h2>
-				<div class="description">
-					At Microsoft, dogfooding our products is one of the biggest parts of designing and
-					creating features. This lightweight teaching moment was a perfect candidate for A/B
-					testing.
-				</div>
-
-				<div class="description">
-					We ran this experiment for two months in our inner ring and came out with some amazing
-					results. Looking back at our success criteria we hit all marks:
-				</div>
-			</div>
-
-			<div class="notelayout">
-				<div class="note">
-					<div class="subheader">Metric 1</div>
-					<div class="description">
-						Number of questions posts were increased at a statistically significant rate
-					</div>
-				</div>
-				<div class="note">
-					<div class="subheader">Metric 2</div>
-					<div class="description">
-						Number of users manually using the question post type was increased at a statistically
-						significant rate
-					</div>
-				</div>
-				<div class="note">
-					<div class="subheader">Metric 3</div>
-					<div class="description">
-						There was even a bonus of an increase in search engagement related to questions
-					</div>
-				</div>
-			</div>
-
-			<div class="section">
-				<div class="description">
-					A rather successful mini-experiment! This data confirmed our assumptions and provided a
-					path forward to bring this to production.
-				</div>
+			<div class="note">
+				<div class="subheader">Metric 2</div>
+				<div class="description">Increase in people using the question post type</div>
 			</div>
 		</div>
-	{:else}
+	</div>
+
+	<div class="grid">
+		<div class="section">
+			<h2>Sketching and concepts</h2>
+			<div class="description">We started off by sketching and brainstorming ideas.</div>
+		</div>
+
+		<img class="image" alt="Sketches" src={sketch1} />
+		<img class="image" alt="Sketches" src={sketch2} />
+
+		<div class="section">
+			<h3>Narrowing in on a concept</h3>
+			<div class="description">
+				We narrowed our sketches and ideas down to three concepts and began to stress test. At this
+				stage, we brought in engineering to help us look deeper into feasibility and testability.
+			</div>
+		</div>
+
+		<img class="image" alt="Hi fidelity concepts" src={stresstest} />
+
+		<div class="section">
+			<div class="description">Even going as far as to look into other behavior paths.</div>
+		</div>
+
+		<img class="image" alt="Hi fidelity concepts" src={different} />
+	</div>
+
+	<div class="grid">
+		<div class="section">
+			<h2>The solution: a small teaching moment</h2>
+			<div class="description">
+				We landed on the concept of a small teaching moment. Based off engineering feedback, it was
+				the most feasible and took the least amount of time which was an absolute plus for us. In
+				addition, it was the most non-disruptive of our choices.
+			</div>
+		</div>
+
+		<img class="image" alt="Spec" src={spec} />
+		<img class="image" alt="User flows" src={flows} />
+	</div>
+
+	<div class="grid">
+		<div class="section">
+			<h2>Dogfooding and impact</h2>
+			<div class="description">
+				At Microsoft, dogfooding our products is one of the biggest parts of designing and creating
+				features. This lightweight teaching moment was a perfect candidate for A/B testing.
+			</div>
+
+			<div class="description">
+				We ran this experiment for two months in our inner ring and came out with some amazing
+				results. Looking back at our success criteria we hit all marks:
+			</div>
+		</div>
+
+		<div class="notelayout">
+			<div class="note">
+				<div class="subheader">Metric 1</div>
+				<div class="description">
+					Number of questions posts were increased at a statistically significant rate
+				</div>
+			</div>
+			<div class="note">
+				<div class="subheader">Metric 2</div>
+				<div class="description">
+					Number of users manually using the question post type was increased at a statistically
+					significant rate
+				</div>
+			</div>
+			<div class="note">
+				<div class="subheader">Metric 3</div>
+				<div class="description">
+					There was even a bonus of an increase in search engagement related to questions
+				</div>
+			</div>
+		</div>
+
+		<div class="section">
+			<div class="description">
+				A rather successful mini-experiment! This data confirmed our assumptions and provided a path
+				forward to bring this to production.
+			</div>
+		</div>
+	</div>
+	<!-- {:else}
 		<div class="grid">
 			<div class="enterpassword">
 				<h3>The full case study is under NDA</h3>
@@ -235,7 +233,7 @@
 				</div>
 			</div>
 		</div>
-	{/if}
+	{/if} -->
 </div>
 
 <style lang="scss">

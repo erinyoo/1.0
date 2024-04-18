@@ -46,165 +46,163 @@
 		</div>
 	</div>
 
-	{#if hash(password) === -1104066105}
-		<div class="grid">
-			<div class="section">
-				<h2>Understanding the problem</h2>
-				<div class="description">
-					We performed interviews to further understand how people were interacting with the topic
-					bar. It revealed some interesting insights as to why people were actually struggling:
-				</div>
-			</div>
-
-			<div class="notelayout">
-				<div class="note">
-					<div class="subheader">Insight 1</div>
-					<div class="description">
-						People didn’t immediately recognize the topics bar as a search bar
-					</div>
-				</div>
-				<div class="note">
-					<div class="subheader">Insight 2</div>
-					<div class="description">
-						People didn’t immediately recognize the topics bar as a search bar
-					</div>
-				</div>
-				<div class="note">
-					<div class="subheader">Insight 3</div>
-					<div class="description">
-						People didn’t immediately recognize the topics bar as a search bar
-					</div>
-				</div>
-			</div>
-			<div class="section">
-				<div class="description">
-					We realized that the topic picking experience was quite a huge undertaking. For such a
-					small feature, it weighed heavily on the entire process of asking a question <i
-						>especially because it was a required step.</i
-					> The asking experience should be easy, not difficult.
-				</div>
+	<!-- {#if hash(password) === -1104066105} -->
+	<div class="grid">
+		<div class="section">
+			<h2>Understanding the problem</h2>
+			<div class="description">
+				We performed interviews to further understand how people were interacting with the topic
+				bar. It revealed some interesting insights as to why people were actually struggling:
 			</div>
 		</div>
 
-		<div class="grid">
-			<div class="section">
-				<h2>Reframing the problem</h2>
+		<div class="notelayout">
+			<div class="note">
+				<div class="subheader">Insight 1</div>
 				<div class="description">
-					Due to engineering constraints and previous design constraints, the process of adding a
-					topic had become arduous for people. To help us think through possible solutions, we posed
-					a question to help reframe our problem: how might we make it as easy as possible for
-					people to attach topics to their questions?
+					People didn’t immediately recognize the topics bar as a search bar
+				</div>
+			</div>
+			<div class="note">
+				<div class="subheader">Insight 2</div>
+				<div class="description">
+					People didn’t immediately recognize the topics bar as a search bar
+				</div>
+			</div>
+			<div class="note">
+				<div class="subheader">Insight 3</div>
+				<div class="description">
+					People didn’t immediately recognize the topics bar as a search bar
 				</div>
 			</div>
 		</div>
-
-		<div class="grid">
-			<div class="section">
-				<h2>Introducing: AI-suggested Topics</h2>
+		<div class="section">
+			<div class="description">
+				We realized that the topic picking experience was quite a huge undertaking. For such a small
+				feature, it weighed heavily on the entire process of asking a question <i
+					>especially because it was a required step.</i
+				> The asking experience should be easy, not difficult.
 			</div>
-			<img class="image" alt="Introducing AI-suggested topics" src={showcase} />
-			<div class="section">
-				<div class="description">
-					AI-suggested topics makes adding topics as simple as the click of a button. Compose your
-					question, and behind the scenes AI will process your content and surface suggested topics
-					for you to choose, all you have to do is click.
-				</div>
+		</div>
+	</div>
+
+	<div class="grid">
+		<div class="section">
+			<h2>Reframing the problem</h2>
+			<div class="description">
+				Due to engineering constraints and previous design constraints, the process of adding a
+				topic had become arduous for people. To help us think through possible solutions, we posed a
+				question to help reframe our problem: how might we make it as easy as possible for people to
+				attach topics to their questions?
+			</div>
+		</div>
+	</div>
+
+	<div class="grid">
+		<div class="section">
+			<h2>Introducing: AI-suggested Topics</h2>
+		</div>
+		<img class="image" alt="Introducing AI-suggested topics" src={showcase} />
+		<div class="section">
+			<div class="description">
+				AI-suggested topics makes adding topics as simple as the click of a button. Compose your
+				question, and behind the scenes AI will process your content and surface suggested topics
+				for you to choose, all you have to do is click.
+			</div>
+		</div>
+	</div>
+
+	<div class="grid">
+		<div class="section">
+			<h2>The nitty gritty</h2>
+			<div class="description">
+				Before we landed on our final shipped feature, the solution went through it's fair share of
+				iterations before reaching it's final stage.
+			</div>
+			<h3>AI in Microsoft</h3>
+			<div class="description">
+				As one of the first AI features being released on the Viva Engage platform, we had to
+				familiarize ourselves with evolving company guidelines and designs on AI and Copilot.
 			</div>
 		</div>
 
-		<div class="grid">
-			<div class="section">
-				<h2>The nitty gritty</h2>
-				<div class="description">
-					Before we landed on our final shipped feature, the solution went through it's fair share
-					of iterations before reaching it's final stage.
-				</div>
-				<h3>AI in Microsoft</h3>
-				<div class="description">
-					As one of the first AI features being released on the Viva Engage platform, we had to
-					familiarize ourselves with evolving company guidelines and designs on AI and Copilot.
-				</div>
-			</div>
+		<img class="image" alt="Microsoft's AI design guidelines" src={guidelines} />
 
-			<img class="image" alt="Microsoft's AI design guidelines" src={guidelines} />
-
-			<div class="section">
-				<h3>Being intentional</h3>
-				<div class="description">
-					It also meant thinking about language and visual distinctions. In addition to suggesting
-					existing topics, the AI will create new topics for users and recommend them, this is when
-					the AI *generates* a topic. The distinction may not be important to users, but guidelines
-					state our design had to visually distinguish these topics to be as explicit as possible.
-				</div>
-			</div>
-
-			<img class="image" alt="Visual distinction" src={distinction} />
-
-			<div class="section">
-				<h3>Embracing iterations</h3>
-				<div class="description">
-					Then came the part of gathering feedback on our high level concepts from the bigger design
-					and engineering team to break down our concepts to feasible, scalable, and testable
-					designs.
-				</div>
-			</div>
-
-			<img class="image" alt="Visual distinction" src={iterations} />
-		</div>
-
-		<div class="grid">
-			<div class="section">
-				<h2>The impact</h2>
-			</div>
-			<div class="notelayout">
-				<div class="note">
-					<div class="subheader">Impact 1</div>
-					<div class="description">
-						<b><h3>54%</h3></b> Topics added are suggested topics
-					</div>
-				</div>
-				<div class="note">
-					<div class="subheader">Impact 2</div>
-					<div class="description"><b><h3>Overall</h3></b> Decrease in question abandonment</div>
-				</div>
+		<div class="section">
+			<h3>Being intentional</h3>
+			<div class="description">
+				It also meant thinking about language and visual distinctions. In addition to suggesting
+				existing topics, the AI will create new topics for users and recommend them, this is when
+				the AI *generates* a topic. The distinction may not be important to users, but guidelines
+				state our design had to visually distinguish these topics to be as explicit as possible.
 			</div>
 		</div>
 
-		<div class="grid">
-			<div class="section">
-				<h2>Growing pains</h2>
-				<div class="description">
-					As a first project the learnings and takeaways were invaluable. As a developer turned
-					designer my mindset shift has been one of the hardest parts of growing as a designer. Some
-					key points I felt worthy of noting:
-				</div>
-				<div class="description">
-					<ul>
-						<li>
-							<b>Sketch!</b> Creating hi-fidelity concepts early seems tempting, but it's a trap. To
-							be able to effectively gain buy-in from stakeholders early on in the process, sketches
-							are one of the most powerful ways to do so. If not sketches, then lo-fidelity mocks.
-						</li>
-						<li>
-							<b>Communicate often and early</b> Communication is truly key when working with cross-functional
-							teams. Oversharing never seemed to be a problem.
-						</li>
-						<li>
-							<b>Get feedback often and early.</b> Obviously too much feedback can be a recipe for "too
-							many cooks in the kitchen", but tweaking the spacing between two components for 30 minutes
-							will also get you nowhere.
-						</li>
-						<li>
-							<b>Problem understanding is key.</b> Without a well-defined problem or even an understanding
-							of your problem, it'll be difficult to ideate or even create proper solutions. Taking time
-							to truly define and gather information surrounding the problem can set a project up for
-							success.
-						</li>
-					</ul>
-				</div>
+		<img class="image" alt="Visual distinction" src={distinction} />
+
+		<div class="section">
+			<h3>Embracing iterations</h3>
+			<div class="description">
+				Then came the part of gathering feedback on our high level concepts from the bigger design
+				and engineering team to break down our concepts to feasible, scalable, and testable designs.
 			</div>
 		</div>
-	{:else}
+
+		<img class="image" alt="Visual distinction" src={iterations} />
+	</div>
+
+	<div class="grid">
+		<div class="section">
+			<h2>The impact</h2>
+		</div>
+		<div class="notelayout">
+			<div class="note">
+				<div class="subheader">Impact 1</div>
+				<div class="description">
+					<b><h3>54%</h3></b> Topics added are suggested topics
+				</div>
+			</div>
+			<div class="note">
+				<div class="subheader">Impact 2</div>
+				<div class="description"><b><h3>Overall</h3></b> Decrease in question abandonment</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="grid">
+		<div class="section">
+			<h2>Growing pains</h2>
+			<div class="description">
+				As a first project the learnings and takeaways were invaluable. As a developer turned
+				designer my mindset shift has been one of the hardest parts of growing as a designer. Some
+				key points I felt worthy of noting:
+			</div>
+			<div class="description">
+				<ul>
+					<li>
+						<b>Sketch!</b> Creating hi-fidelity concepts early seems tempting, but it's a trap. To be
+						able to effectively gain buy-in from stakeholders early on in the process, sketches are one
+						of the most powerful ways to do so. If not sketches, then lo-fidelity mocks.
+					</li>
+					<li>
+						<b>Communicate often and early</b> Communication is truly key when working with cross-functional
+						teams. Oversharing never seemed to be a problem.
+					</li>
+					<li>
+						<b>Get feedback often and early.</b> Obviously too much feedback can be a recipe for "too
+						many cooks in the kitchen", but tweaking the spacing between two components for 30 minutes
+						will also get you nowhere.
+					</li>
+					<li>
+						<b>Problem understanding is key.</b> Without a well-defined problem or even an understanding
+						of your problem, it'll be difficult to ideate or even create proper solutions. Taking time
+						to truly define and gather information surrounding the problem can set a project up for success.
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- {:else}
 		<div class="grid">
 			<div class="enterpassword">
 				<h3>The full case study is under NDA</h3>
@@ -214,7 +212,7 @@
 				</div>
 			</div>
 		</div>
-	{/if}
+	{/if} -->
 </div>
 
 <style lang="scss">
