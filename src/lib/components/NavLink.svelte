@@ -5,6 +5,7 @@
 	export let href;
 	export let title;
 	export let newTab = false;
+	export let isOn = false;
 
 	let currentPath;
 	onMount(() => {
@@ -12,7 +13,9 @@
 	});
 </script>
 
-<a {href} class:active={$page.url.pathname == href} target={newTab ? '_blank' : ''}>{title}</a>
+<a {href} class:active={$page.url.pathname == href || isOn} target={newTab ? '_blank' : ''}
+	>{title}</a
+>
 
 <style lang="scss">
 	$font-family: inter, sans-serif;

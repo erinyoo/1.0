@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import { blur } from 'svelte/transition';
 	import suggested from '$lib/aisuggested/suggested.png';
+	import growth from '$lib/growthpublisher/growth.png';
 	let ready = false;
 	onMount(() => (ready = true));
 	$: innerWidth = 0;
@@ -40,14 +41,26 @@
 {#if ready}
 	<div class="container">
 		<div out:blur={{ delay: 200 }} in:blur={{ delay: 1900 }} class="grid">
-			<div class="section">
+			<div class="section1">
 				<a href="/aisuggested">
 					<div class="card">
 						<div class="cardheader">
 							<div class="subheader">Microsoft Viva</div>
-							<h3>Topics at a click of a button</h3>
+							<h3>Topics at your fingertips</h3>
 						</div>
 						<img class="image" alt="Introducing AI-suggested topics" src={suggested} />
+					</div>
+				</a>
+			</div>
+
+			<div class="section2">
+				<a href="/growthpublisher">
+					<div class="card">
+						<div class="cardheader">
+							<div class="subheader">Microsoft Viva</div>
+							<h3>Growing question posts</h3>
+						</div>
+						<img class="image" alt="Growing questions" src={growth} />
 					</div>
 				</a>
 			</div>
@@ -75,10 +88,17 @@
 		transition: all 0.5s 0s ease;
 	}
 
-	.section {
+	.section1 {
 		padding: 0 0 64px 0;
-		grid-column-start: 8;
-		grid-column-end: 19;
+		grid-column-start: 4;
+		grid-column-end: 13;
+		transition: all 0.5s 0s ease;
+	}
+
+	.section2 {
+		padding: 0 0 64px 0;
+		grid-column-start: 14;
+		grid-column-end: 23;
 		transition: all 0.5s 0s ease;
 	}
 
@@ -158,6 +178,16 @@
 		z-index: 10;
 	}
 
+	@media only screen and (max-width: 900px) {
+		.section1,
+		.section2 {
+			grid-column-start: 2;
+			grid-column-end: 25;
+			transition: all 0.5s 0s ease;
+			padding: 0 0 32px 0;
+		}
+	}
+
 	@media only screen and (max-width: 700px) {
 		h3 {
 			font: 1.5rem $gelica;
@@ -184,13 +214,6 @@
 
 		.container {
 			margin: 48px auto;
-			transition: all 0.5s 0s ease;
-		}
-
-		.section {
-			padding: 0 0 64px 0;
-			grid-column-start: 2;
-			grid-column-end: 25;
 			transition: all 0.5s 0s ease;
 		}
 	}
